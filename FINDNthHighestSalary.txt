@@ -1,0 +1,28 @@
+CREATE TABLE Employee
+(
+Eid int,
+Ename varchar(20),
+Esalary varchar(20)
+);
+
+INSERT INTO Employee(Eid, Ename, Esalary)
+VALUES(123, 'raj', 4000) ;
+
+INSERT INTO Employee(Eid, Ename, Esalary)
+VALUES(124, 'joe', 1000) ;
+
+INSERT INTO Employee(Eid, Ename, Esalary)
+VALUES(125, 'jiya', 2000) ;
+
+INSERT INTO Employee(Eid, Ename, Esalary)
+VALUES(126, 'rehan', 6000) ;
+
+INSERT INTO Employee(Eid, Ename, Esalary)
+VALUES(127, 'rohan',2000) ;
+
+INSERT INTO Employee(Eid, Ename, Esalary)
+VALUES(128, 'ritvik', 4000) ;
+
+SELECT TOP 1 Esalary FROM(SELECT DISTINCT TOP 2 Esalary FROM Employee
+ORDER BY Esalary DESC)Result
+ORDER BY Esalary;
