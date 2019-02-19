@@ -1,0 +1,13 @@
+select * from Sinfo 
+where Limit OffsetValue , noOfRecords ;
+
+above statement means it will return records from this offset value upto this noofRecords.
+
+
+last 5 records:
+
+
+Select * from Sinfo
+where Limit (Select count(*) from Sinfo) - 5, 5) ;
+
+suppose if there 90 rows then it will start from offset of 85 row to upto 5 records ;
