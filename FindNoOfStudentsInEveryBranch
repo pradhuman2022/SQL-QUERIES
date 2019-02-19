@@ -1,0 +1,27 @@
+Create Table Sinfo
+(
+Sid int,
+Branch varchar(20),
+year int
+);
+
+Insert Into Sinfo
+Values(123,'cse',2015);
+
+Insert Into Sinfo
+Values(124,'cse',2015);
+
+Insert Into Sinfo
+Values(224,'ce',2016);
+
+Insert Into Sinfo
+Values(229,'ce',2016);
+
+Insert Into Sinfo
+Values(301,'ee',2014);
+
+Insert Into Sinfo
+Values(308,'ee',2014);
+
+Select Branch ,Count(Branch) As NoOfStduents From Sinfo
+Group by Branch;
